@@ -7,8 +7,11 @@ Homebrew casks for apps by tasict.
 [Turnout](https://turnout.ctsite.cc/) is a VPN client for macOS that connects to WireGuard servers and lets you choose which network interface each tunnel's traffic leaves through.
 
 ```sh
+brew tap tasict/tap
 brew install --cask tasict/tap/turnout
 ```
+
+Homebrew installs casks from other taps only once the tap has been added with `brew tap`; the first line does that once.
 
 - Turnout opens after installing and walks you through its setup: it runs its tunnels in a background service, which macOS asks you to allow once in System Settings › General › Login Items & Extensions.
 - Turnout updates itself, so `brew upgrade` leaves it alone. `brew upgrade --greedy` reinstalls it, and the background service then has to be allowed again.

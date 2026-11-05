@@ -1,15 +1,20 @@
 cask "turnout" do
-  version "1.1.2"
-  sha256 "4c964ba34cc18825d420037f85c10acfde0e4269e7e92ccdb564de1e8000e6bc"
+  version "1.1.3"
+  sha256 "1341b0c9e1f3c7e7b8a6a0d5b97575aa8925fe7104c2286986a61d6e5d2be6a1"
 
-  url "https://github.com/tasict/Turnout/releases/download/v#{version}/Turnout-#{version}.pkg"
+  # The website's stable address for the package, which it redirects to
+  # wherever the releases are hosted (site/_redirects).
+  url "https://turnout.ctsite.cc/download/v#{version}/Turnout-#{version}.pkg"
   name "Turnout"
   desc "VPN client that connects to WireGuard servers with wg-quick parity"
   homepage "https://turnout.ctsite.cc/"
 
+  # The app's own update feed, the newest release's update.json.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://turnout.ctsite.cc/latest/update.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true

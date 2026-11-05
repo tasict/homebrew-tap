@@ -1,6 +1,6 @@
 cask "turnout" do
-  version "1.1.1"
-  sha256 "97bbb5a5311a32032ded4163d8a17d88731fb589ec1811c4394b42b65da235db"
+  version "1.1.2"
+  sha256 "4c964ba34cc18825d420037f85c10acfde0e4269e7e92ccdb564de1e8000e6bc"
 
   url "https://github.com/tasict/Turnout/releases/download/v#{version}/Turnout-#{version}.pkg"
   name "Turnout"

@@ -1,6 +1,6 @@
 cask "turnout" do
-  version "1.2.0"
-  sha256 "ed65cbda6eee0215c7513f6c7f36ac9eac223fb7fad68b7638934755aad12804"
+  version "1.2.1"
+  sha256 "1f9c67708eb46812ca821394c72753875f4102b80f4c4d59844b88c03297d551"
 
   # The website's stable address for the package, which it redirects to
   # wherever the releases are hosted (site/_redirects).
